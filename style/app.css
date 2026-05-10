@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+html {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.75em;
+  --theme-color: #007FFF;
+}
+body {
+    margin: 0;
+}
+.header, .footer {
+  background: black;
+  color: white;
+  padding: 8px;
+}
+.sitetitle {
+  font-weight: 500;
+}
+.container {
+  margin: 8px;
+}
