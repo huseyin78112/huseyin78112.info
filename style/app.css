@@ -23,3 +23,10 @@ body {
 .container {
   margin: 8px;
 }
+a:any-link {
+  color: var(--theme-color);
+  text-decoration: none;
+}
+a:any-link:hover {
+  text-decoration: underline;
+}
