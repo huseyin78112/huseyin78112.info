@@ -8,9 +8,14 @@ body {
     margin: 0;
 }
 .header, .footer {
-  background: black;
   color: white;
   padding: 8px;
+}
+.header {
+  background: var(--theme-color);
+}
+.footer {
+  background: black;
 }
 .sitetitle {
   font-weight: 500;
