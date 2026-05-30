@@ -30,6 +30,9 @@ a:any-link {
 a:any-link:hover {
   text-decoration: underline;
 }
+.aspect169 {
+  aspect-ratio: 16/9;
+}
 .autosize {
   width: 100%;
 }
