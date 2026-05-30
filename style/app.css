@@ -30,3 +30,11 @@ a:any-link {
 a:any-link:hover {
   text-decoration: underline;
 }
+.autosize {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .autosize {
+    width: 480px;
+  }
+}
