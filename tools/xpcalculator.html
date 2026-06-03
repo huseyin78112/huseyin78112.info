@@ -1,0 +1,39 @@
+---
+layout: huseyin78112main
+title: XP Hesaplayıcı | Huseyin78112
+---
+
+<h1>XP Hesaplayıcı</h1>
+<p>Kaynak XP seviyesi: <input type="number" id="sourcexplevel" min="1" max="149"></p>
+<p>Hedef XP seviyesi: <input type="number" id="targetxplevel" min="2" max="150"></p>
+<p><button id="calculate">Hesapla</button></p>
+<p><span id="reqxp">0</span> XP'ye ihtiyacınız var</p>
+<script>
+  calculate.onclick = function() {
+    performCalculate();
+};
+targetxplevel.oninput = function() {
+    if (parseInt(sourcexplevel.value) >= parseInt(targetxplevel.value)) {
+        throwValidityError();
+    }
+    else {
+        targetxplevel.setCustomValidity("");
+    }
+};
+function performCalculate() {
+    targetxplevel.setCustomValidity("");
+    if (parseInt(sourcexplevel.value) >= parseInt(targetxplevel.value)) {
+        throwValidityError();
+    }
+    if (sourcexplevel.reportValidity() && targetxplevel.reportValidity()) {
+        var xp = 0;
+        for (var i = parseInt(sourcexplevel.value); i < parseInt(targetxplevel.value); i++) {
+            xp += i * 600;
+        }
+        reqxp.innerText = xp;
+    }
+}
+function throwValidityError() {
+    targetxplevel.setCustomValidity("Hedef XP seviyesi kaynak XP seviyesinden küçük veya ona eşit olamaz.");
+}
+</script>
