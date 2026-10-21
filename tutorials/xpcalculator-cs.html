@@ -1,0 +1,49 @@
+---
+layout: huseyin78112main
+title: C# ile Pixel Worlds XP Hesaplayıcı yapma | Huseyin78112
+---
+
+<h1>C# ile kendi Pixel Worlds XP hesaplayıcınızı yapma</h1>
+<pre>
+internal class Program
+{
+    private static int Main(string[] args)
+    {
+        int argCount = args.Length;
+        if (argCount != 2)
+        {
+            Console.Error.WriteLine("2 tane parametre bekleniyor.");
+            return -1;
+        }
+        int sourceXPLevel = 1;
+        if (!int.TryParse(args[0], out sourceXPLevel))
+        {
+            Console.Error.WriteLine("Kaynak XP seviyesi ayrıştırılamadı.");
+            return -2;
+        }
+        int targetXPLevel = 2;
+        if (!int.TryParse(args[1], out targetXPLevel))
+        {
+            Console.Error.WriteLine("Hedef XP seviyesi ayrıştırılamadı.");
+            return -2;
+        }
+        if (sourceXPLevel &lt; 1 || sourceXPLevel &gt; 149)
+        {
+            Console.Error.WriteLine("Kaynak XP seviyesi geçersiz bir değere sahip. 1 ile 149 arasında olmalıdır.");
+            return -3;
+        }
+        if (targetXPLevel &lt;= sourceXPLevel || targetXPLevel &gt; 150)
+        {
+            Console.Error.WriteLine("Hedef XP seviyesi geçersiz bir değere sahip. Kaynak XP seviyesinin 1 fazlası ile 150 arasında olmalıdır.");
+            return -3;
+        }
+        int xp = 0;
+        for (int i = sourceXPLevel; i &lt; targetXPLevel; i++)
+        {
+            xp += i * 600;
+        }
+        Console.WriteLine("{0} XP'ye ihtiyacınız var", xp);
+        return 0;
+    }
+}
+</pre>
