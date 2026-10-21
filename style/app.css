@@ -36,6 +36,9 @@ a:any-link:hover {
 .autosize {
   width: 100%;
 }
+input, button {
+  font: inherit;
+}
 @media (min-width: 640px) {
   .autosize {
     width: 480px;
