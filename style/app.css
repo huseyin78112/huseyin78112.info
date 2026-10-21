@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 html {
   font-family: Roboto, sans-serif;
   font-size: 0.875em;
@@ -38,6 +38,9 @@ a:any-link:hover {
 }
 input, button {
   font: inherit;
+}
+code, pre {
+  font-family: 'Cascadia Mono', monospace;
 }
 @media (min-width: 640px) {
   .autosize {
