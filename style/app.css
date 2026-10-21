@@ -42,6 +42,9 @@ input, button {
 code, pre {
   font-family: 'Cascadia Mono', monospace;
 }
+pre {
+  overflow-x: overlay;
+}
 @media (min-width: 640px) {
   .autosize {
     width: 480px;
