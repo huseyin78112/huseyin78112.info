@@ -3,6 +3,7 @@ html {
   font-family: Roboto, sans-serif;
   font-size: 0.875em;
   --theme-color: #AA00AA;
+  color-scheme: light dark;
 }
 body {
     margin: 0;
