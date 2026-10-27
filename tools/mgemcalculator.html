@@ -1,0 +1,102 @@
+---
+layout: huseyin78112main
+title: Mining Gem Hesaplayıcı | Huseyin78112
+---
+
+<h1>Mining Gem Hesaplayıcı</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Tiny</th>
+<th>Small</th>
+<th>Medium</th>
+<th>Large</th>
+<th>Huge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Topaz</th>
+<th><input type="number" id="topaz_tiny" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="topaz_small" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="topaz_medium" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="topaz_large" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="topaz_huge" min="0" max="99999" value="0" /></th>
+</tr>
+<tr>
+<th>Emerald</th>
+<th><input type="number" id="emerald_tiny" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="emerald_small" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="emerald_medium" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="emerald_large" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="emerald_huge" min="0" max="99999" value="0" /></th>
+</tr>
+<tr>
+<th>Sapphire</th>
+<th><input type="number" id="sapphire_tiny" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="sapphire_small" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="sapphire_medium" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="sapphire_large" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="sapphire_huge" min="0" max="99999" value="0" /></th>
+</tr>
+<tr>
+<th>Ruby</th>
+<th><input type="number" id="ruby_tiny" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="ruby_small" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="ruby_medium" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="ruby_large" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="ruby_huge" min="0" max="99999" value="0" /></th>
+</tr>
+<tr>
+<th>Diamond</th>
+<th><input type="number" id="diamond_tiny" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="diamond_small" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="diamond_medium" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="diamond_large" min="0" max="99999" value="0" /></th>
+<th><input type="number" id="diamond_huge" min="0" max="99999" value="0" /></th>
+</tr>
+</tbody>
+</table>
+<p><button id="calculate">Hesapla</button></p>
+<p>Toplam: <b><span id="gems">0</span></b> Gems</p>
+<script>
+calculate.onclick = function() {
+var validity = true;
+document.querySelectorAll("input[type=number]").forEach(function(e) {
+
+if (e.reportValidity() && validity) {
+}
+else {validity = false;}
+});
+if (validity) {
+    var totalgems = 0;
+    totalgems += topaz_tiny.value * 3;
+    totalgems += topaz_small.value * 6;
+    totalgems += topaz_medium.value * 12;
+    totalgems += topaz_large.value * 30;
+    totalgems += topaz_huge.value * 60;
+    totalgems += emerald_tiny.value * 5;
+    totalgems += emerald_small.value * 10;
+    totalgems += emerald_medium.value * 20;
+    totalgems += emerald_large.value * 50;
+    totalgems += emerald_huge.value * 100;
+    totalgems += sapphire_tiny.value * 10;
+    totalgems += sapphire_small.value * 20;
+    totalgems += sapphire_medium.value * 40;
+    totalgems += sapphire_large.value * 100;
+    totalgems += sapphire_huge.value * 200;
+    totalgems += ruby_tiny.value * 15;
+    totalgems += ruby_small.value * 30;
+    totalgems += ruby_medium.value * 60;
+    totalgems += ruby_large.value * 150;
+    totalgems += ruby_huge.value * 300;
+    totalgems += diamond_tiny.value * 20;
+    totalgems += diamond_small.value * 40;
+    totalgems += diamond_medium.value * 80;
+    totalgems += diamond_large.value * 200;
+    totalgems += diamond_huge.value * 400;
+    gems.innerText = totalgems;
+}
+};
+</script>
